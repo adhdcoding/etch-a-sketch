@@ -5,41 +5,128 @@ body{
     background-color: rgb(226, 201, 171);
     box-sizing: border-box;
 }
-.pinkfill{
-    background-color: rgba(255, 192, 203, 0.552);
-    box-sizing: border-box;
+
+button{
+    padding: 10px;
+    margin: 10px;
+    background-color:cadetblue;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 14px;
+    border: 0;
+}
+button:hover{
+    box-shadow: 5px 5px 15px 5px #dbc952;
 }
 .aqua{
     box-sizing: border-box;
-    background-color: aqua;
-    border: 1px solid whitesmoke;
+    background-color: #aaa;
 }
 
 #bigbox{
     display: grid;
     width: 600px;
     height: 600px;
-    border: 1px solid rgb(108, 23, 23);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 22px;
+    overflow: hidden;
     box-sizing: border-box;
+    background-color: papayawhip;
+    margin-bottom: 20px;
 }
 
+
 #container{
-    margin: 100px;
+    width: fit-content;
+    border-radius: 14px;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(177, 37, 37);
+    text-align: center;
 }
 
 .range-box{
     width: 595px;
 }
 
-.slider {
+.sliderr {
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
-    color: white;
     width: 100%; /* Full-width */
     height: 40px; /* Specified height */
-    ; /* Grey background */
-    outline:auto; /* Remove outline */
-    opacity: 0.81; /* Set transparency (for mouse-over effects on hover) */
+    background-color: rgb(255, 255, 0); /* Grey background */
+    outline:none; /* Remove outline */
+    opacity: 1; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
   }
+
+
+  .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #aaa;
+  -webkit-transition: .4s;
+  transition: .4s;
+  
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(238, 238, 238);
+  -webkit-transition: .4s;
+  transition: .4s;
+  padding: -5px;
+}
+
+input:checked + .slider {
+  background-image: linear-gradient(to right, red,orange,yellow,green,blue,purple,violet);
+}
+
+input:focus + .slider {
+  box-shadow: 2px 2px 4px #e0d836;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

@@ -10,11 +10,18 @@
 <body>
     <div id="container">
         
-        <div class="range-box">
-            <p>box count <span id="range-value"></span> boxes</p>
-            <input type="range" min="1" max="64" value="32" class="slider" id="range"></div>
         
+        <h1>Doodle Dee Doodle Doo</h1>
         <div id="bigbox"></div>
+        <div class="range-box">
+            <label class="switch">
+                <input id="rainbow" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            <button id="clear">Start/Wipe</button>
+            <p>box count <span id="range-value">32 x 32 in total: 1024</span> boxes</p>
+            <input type="range" min="1" max="64" value="32" class="sliderr" id="range">
+        </div>
     </div>
     
 
