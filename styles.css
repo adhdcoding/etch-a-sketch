@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(226, 201, 171);
+    box-sizing: border-box;
+}
+.pinkfill{
+    background-color: rgba(255, 192, 203, 0.552);
+    box-sizing: border-box;
+}
+.aqua{
+    box-sizing: border-box;
+    background-color: aqua;
+    border: 1px solid whitesmoke;
+}
+
+#bigbox{
+    display: grid;
+    width: 600px;
+    height: 600px;
+    border: 1px solid rgb(108, 23, 23);
+    box-sizing: border-box;
+}
+
+#container{
+    margin: 100px;
+}
+
+.range-box{
+    width: 595px;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    color: white;
+    width: 100%; /* Full-width */
+    height: 40px; /* Specified height */
+    ; /* Grey background */
+    outline:auto; /* Remove outline */
+    opacity: 0.81; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
